@@ -1,0 +1,55 @@
+:root {
+  --primary-background-color: #d6d1be;
+  --secondary-background-color: #f3efea;
+  --primary-text: #121212;
+  --secondary-text: #4a4a4a;
+  --xxlg-size: 3rem;
+  --xlg-size: 1.4rem;
+  --lg-size: 1.4rem;
+  --md-size: 1.25rem;
+  --sm-size: 1.06rem;
+  --border-width: 2px;
+}
+
+body,
+main {
+  background-color: #f3efea;
+}
+
+@font-face {
+  font-family: Governor;
+  src: url(Governor.ttf);
+}
+
+h1 {
+  font-family: Governor;
+  font-size: 4rem;
+  line-height: 0.7;
+}
+
+h2 {
+  font-family: Governor;
+  font-size: 2rem;
+  line-height: 0.7;
+}
+p,
+h3 {
+  line-height: 1.8;
+  font: Helvetica;
+}
+
+@font-face {
+  font-family: Maver;
+  src: url(Maver.ttf);
+}
+
+h1,
+h2 {
+  font-family: Maver;
+  font-size: var(--xxlg-size);
+  line-height: 0.9;
+}
+
+* {
+  font: Helvetica;
+}

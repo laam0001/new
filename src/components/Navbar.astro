@@ -1,0 +1,88 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<div x-data="{ showmenu: false }" class="">
+  <div id="navbar" class="flex flex-row justify-between">
+    <nav id="desktopmenu" class="hidden lg:block">
+      <ul class="flex flex-row gap-6 lg:pr-26 lg:pt-4 lg:text-md">
+        <li
+          class="text-[#fffce2] hover:text-[#203321] hover:underline decoration-solid"
+        >
+          <a href="#sektion1">Digitalt affald?</a>
+        </li>
+        <li
+          class="text-[#fffce2] hover:text-[#203321] hover:underline decoration-solid"
+        >
+          <a href="#sektion2">Problemet</a>
+        </li>
+        <li
+          class="text-[#fffce2] hover:text-[#203321] hover:underline decoration-solid"
+        >
+          <a href="#sektion3">Vidste du?</a>
+        </li>
+        <li
+          class="text-[#fffce2] hover:text-[#203321] hover:underline decoration-solid"
+        >
+          <a href="#sektion4">Hvordan gør jeg?</a>
+        </li>
+        <li
+          class="text-[#fffce2] hover:text-[#203321] hover:underline decoration-solid"
+        >
+          <a href="#sektion5">Hvor meget?</a>
+        </li>
+        <a href="#sektion6">
+          <Button variant="secondary" size="small">Tilmeld</Button></a
+        >
+      </ul>
+    </nav>
+    <button
+      id="burgermenu"
+      class="lg:hidden pr-4 mx-24 pt-10 text-[#fffce2] font-semibold"
+      x-on:click="showmenu = ! showmenu">Menu</button
+    >
+  </div>
+  <nav
+    id="mobilmenu"
+    class="flex flex-col pt-5"
+    x-show="showmenu"
+    x-transition
+    x-on:click="showmenu = false"
+    x-on:click.outside="showmenu = false"
+  >
+    <ul>
+      <li
+        class="text-[#fffce2] text-center py-4 hover:text-[#203321] hover:underline decoration-solid"
+      >
+        <a href="#sektion1">Digitalt affald?</a>
+      </li>
+      <li
+        class="text-[#fffce2] text-center py-4 hover:text-[#203321] hover:underline decoration-solid"
+      >
+        <a href="#sektion2">Problemet</a>
+      </li>
+      <li
+        class="text-[#fffce2] text-center py-4 hover:text-[#203321] hover:underline decoration-solid"
+      >
+        <a href="#sektion3">Vidste du?</a>
+      </li>
+      <li
+        class="text-[#fffce2] text-center py-4 hover:text-[#203321] hover:underline decoration-solid"
+      >
+        <a href="#sektion4">Hvordan gør jeg?</a>
+      </li>
+      <li
+        class="text-[#fffce2] text-center py-4 hover:text-[#203321] hover:underline decoration-solid"
+      >
+        <a href="#sektion5">Hvor meget?</a>
+      </li>
+      <a href="#sektion6">
+        <div class="flex justify-end pr-20 py-2">
+          <Button class="px-10" variant="secondary" size="small">
+            Tilmeld
+          </Button>
+        </div></a
+      >
+    </ul>
+  </nav>
+</div>
